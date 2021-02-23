@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: sans-serif;
+    transition: all linear .5s;
+}
+* {
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* Logo image */
+.logo-img {
+    height: 100px;
+    display: inline;
+}
+.title {
+    margin: 40px 0;
+    text-align: center;
+    display: inline;
+}
+
+/* Color change buttons */
+.switcher {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.switcher li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 0 15px 15px 0;
+    border-radius: 30px;
+    border: 3px solid black;
+}
+#blackButton {
+    background: #333;   
+}
+#whiteButton {
+    background: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* First block */
+.first-block {
+    width: 70%;
+    /* border-left: 2px solid black; */
+}
+
+.section-title {
+    text-align: center;
+}
+
+
+
+summary {
+    /* display: block; */
+    cursor: pointer;
+    padding: 10px;
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
+    transition: .3s;
+    border-bottom: 2px solid;
+    user-select: none;
+}
+
+.film-inner {
+    display: flex;
+    justify-content: flex-start;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 100%;
+    user-select: none;
+    padding: 0 20px;
+    font-family: "Karla", sans-serif;
+    line-height: 1.5;
+}
+.film-cover {
+    height: 200px;
+    /* width: 30%; */
+    /* align-self: flex-start; */
+    max-width: 100%;
+    margin-top: 20px;
+}
+.film-info {
+}
+.film-info > * {
+    margin: 10px 20px;
+}
+.checked {
+    color: orange;
+}
+.film-inner p {
+    flex: 1;
+}
+.buy-ticket-btn {
+    border: none;
+    color: white;
+    background: darkblue;
+    padding: 10px 25px;
+    text-align: center;
+    /* text-decoration: none; */
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+details[open] > summary {
+    color: red;
+}
+
+@media (min-width: 768px) {
+    details[open] > div {
+        animation-name: slideDown;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+    }
+    details[open] > div > p {
+        opacity: 0;
+        animation-name: showContent;
+        animation-duration: 0.6s;
+        animation-delay: 0.2s;
+        animation-fill-mode: forwards;
+        margin: 0;
+        padding-left: 20px;
+    }
+    details[open] > div > img {
+        opacity: 0;
+        /* height: 100%; */
+        margin: 0;
+        animation-name: showImage;
+        animation-duration: 0.3s;
+        animation-delay: 0.15s;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        height: 0;
+        padding: 0;
+    }
+    to {
+        opacity: 1;
+        height: var(--contentHeight);
+        padding: 20px;
+    }
+}
+@keyframes showImage {
+    from {
+        opacity: 0;
+        clip-path: inset(50% 0 50% 0);
+        transform: scale(0.4);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+@keyframes showContent {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* Second block */
+.second-block {
+    width: 30%;
+    /* text-align: center; */
+    border-left: 2px solid black;
+}
+.second-block label, .second-block p {
+    /* display: block; */
+    margin: 10px;
+}
+.filter-section {
+    margin: 10px;
+}
+.filters{
+    border-style: solid;
+    border-color: black;
+    background-color: lightgray;
+    margin-left: 5px;
+    border-radius: 20px;
+}
+.session {
+    /* padding: 10px 20px; */
+}
+.genres {
+    width: 60%;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.genres p {
+    width: 30%;
+}
+
+
+
+/* Modal window */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vw; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #333;
+    color: white;
+  }
+
+
+
+  /* Cinema-schedule and ticket prices */
+.cinema-schedule {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+.cinema-schedule th {
+    border: 1px solid black;
+    padding: 5px;
+}
