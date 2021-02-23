@@ -23,7 +23,7 @@
 
     <div class="container">
 
-        <div class="first-block">
+        <div class="left-block">
 
             <h2 class="section-title">Фильмы на дату: </h2>
 
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <div class="second-block">
+        <div class="right-block">
             <h2 class="section-title">Фильтры: </h2>
 
             <div class="filters" id="filters">
@@ -43,7 +43,7 @@
                         <input type="date" id="date" value="2021-02-17" min="2021-02-10" max="2021-02-24">
                     </div>
         
-                    <div class="filter-section">
+                    <!-- <div class="filter-section">
                         <label for="session">Выберите сеанс:</label>
                         <select name="select-data" id="session" class="session"> 
                             <option value="">10:00</option>
@@ -53,7 +53,7 @@
                             <option value="">18:00</option>
                             <option value="">20:00</option>
                         </select>
-                    </div>
+                    </div> -->
         
                     <div class="filter-section">
                         <p>Жанр:</p>
@@ -67,9 +67,8 @@
                             <p><input type="checkbox" name="genre" id="g6" value="Ужасы">Ужасы</p>
                         </div>
                     </div>
-    
-                    <input type="submit" value="Искать" form="filters-form">
                 </form>
+                <input id="filters-button" class="filters-button" type="button" value="Искать" form="filters-form">
             </div>
 
 

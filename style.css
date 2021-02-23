@@ -52,8 +52,8 @@ body {
     display: flex;
 }
 
-/* First block */
-.first-block {
+/* Left block */
+.left-block {
     width: 70%;
     /* border-left: 2px solid black; */
 }
@@ -111,7 +111,6 @@ summary {
     background: darkblue;
     padding: 10px 25px;
     text-align: center;
-    /* text-decoration: none; */
     display: inline-block;
     font-size: 14px;
     transition-duration: 0.4s;
@@ -180,33 +179,41 @@ details[open] > summary {
 
 
 
-/* Second block */
-.second-block {
+/* Right block */
+.right-block {
     width: 30%;
-    /* text-align: center; */
-    border-left: 2px solid black;
+    /* border-left: 2px solid black; */
 }
-.second-block label, .second-block p {
-    /* display: block; */
+.right-block label, .right-block p {
     margin: 10px;
 }
 .filter-section {
     margin: 10px;
 }
-.filters{
+.filters {
     border-style: solid;
     border-color: black;
     background-color: lightgray;
     margin-left: 5px;
     border-radius: 20px;
 }
-.session {
-    /* padding: 10px 20px; */
+.filters-button {
+    border: none;
+    color: white;
+    background: #555555;
+    padding: 10px 25px;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
+/* .session {
+    padding: 10px 20px;
+} */
 .genres {
-    width: 60%;
-    display: inline-flex;
-    justify-content: space-around;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .genres p {
