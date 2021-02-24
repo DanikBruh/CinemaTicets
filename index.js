@@ -45,10 +45,19 @@ movies.push(new Movie('Однажды в… Голливуде', 'https://avatar
 movies.push(new Movie('Первому игроку приготовиться', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/5ae82f4b-fd6a-46b5-b5ba-897106eb1eae/300x450', 4, ['фантастика', 'боевик', 'приключения'], 12, 140, sessions));
 movies.push(new Movie('Аватар', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/4adf61aa-3cb7-4381-9245-523971e5b4c8/300x450', 4, ['фантастика', 'боевик', 'драма', 'приключения'], 12, 162, sessions));
 movies.push(new Movie('Властелин колец: Братство кольца', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/1d36b3f8-3379-4801-9606-c330eed60a01/300x450', 5, ['фэнтэзи', 'приключения', 'драма'], 12, 178, sessions));
-var cinemaWeek = [];
+movies.push(new Movie('Душа', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/35ba5d24-9d1f-4c1f-84af-d5245570faf8/300x450', 4, ['мультфильм', 'фэнтэзи', 'комедия', "приключения", "музыка"], 6, 106, sessions));
+movies.push(new Movie('Клаус', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/279f9f19-6a29-4fae-935e-54ddf80c653b/300x450', 5, ['мультфильм', 'семейный', 'комедия', "приключения"], 6, 96, sessions));
+movies.push(new Movie('Тайна Коко', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/6e11a16e-c9e7-491f-9162-01098a7d8dd9/300x450', 5, ['мультфильм', ' фэнтези', 'детектив', "приключения", "семейный"], 12, 105, sessions));
+movies.push(new Movie('Джокер', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/84934543-5991-4c93-97eb-beb6186a3ad7/300x450', 5, ['триллер', 'драмма', 'криминал'], 18, 122, sessions));
+movies.push(new Movie('1+1', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/bf93b465-1189-4155-9dd1-cb9fb5cb1bb5/300x450', 5, ['драмма', ' комедия', 'биография', "приключения", "семейный"], 16, 112, sessions));
+var cinemaWeek = new Array();
 cinemaWeek.push(new CinemaDay(movies, new Date(2021, 1, 24)));
 cinemaWeek.push(new CinemaDay(movies, new Date(2021, 1, 25)));
 cinemaWeek.push(new CinemaDay(movies, new Date(2021, 1, 26)));
+cinemaWeek.push(new CinemaDay(movies, new Date(2021, 1, 27)));
+cinemaWeek.push(new CinemaDay(movies, new Date(2021, 1, 28)));
+cinemaWeek.push(new CinemaDay(movies, new Date(2021, 2, 1)));
+
 
 
 let filmsList = document.getElementsByClassName('films-list')[0];
